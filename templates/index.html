@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome to the Disney Land.</h1>
+  
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+        <label for="Temperature">Temperature:</label><br>
+        <input type="text" id="Temperature" name="Temperature" required><br>
+        
+        <label for="RH">RH:</label><br>
+        <input type="text" id="RH" name="RH" required><br>
+        
+        <label for="Ws">Ws:</label><br>
+        <input type="text" id="Ws" name="Ws" required><br>
+        
+        <label for="Rain">Rain:</label><br>
+        <input type="text" id="Rain" name="Rain" required><br>
+        
+        <label for="FFMC">FFMC:</label><br>
+        <input type="text" id="FFMC" name="FFMC" required><br>
+        
+        <label for="DMC">DMC:</label><br>
+        <input type="text" id="DMC" name="DMC" required><br>
+        
+        <label for="DC">DC:</label><br>
+        <input type="text" id="DC" name="DC" required><br>
+        
+        <label for="ISI">ISI:</label><br>
+        <input type="text" id="ISI" name="ISI" required><br>
+        
+        <label for="BUI">BUI:</label><br>
+        <input type="text" id="BUI" name="BUI" required><br>
+        
+        <label for="FWI">FWI:</label><br>
+        <input type="text" id="FWI" name="FWI" required><br>
+        
+        <label for="Classes">Classes:</label><br>
+        <input type="text" id="Classes" name="Classes" required><br>
+        
+        <label for="Region">Region:</label><br>
+        <input type="text" id="Region" name="Region" required><br>
+        
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+    <h2>The FWI prediction is {{ result }}</h2>
+</body>
+</html>
